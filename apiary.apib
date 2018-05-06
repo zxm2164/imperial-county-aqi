@@ -1,37 +1,135 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://www.imperialvalleyair.org/
 
 # Imperial County AQI
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Returns data from imperial valley air quality data
 
-## Questions Collection [/questions]
+## AQI Collection [/ajax/mapData.txt{?method}]
 
-### List All Questions [GET]
+
+### List All AQI Values [GET]
+
++ Parameters
+
+    + method (string, optional) - The maximum number of results to return.
+        + Default: `getCityData`
+
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+        {
+        "1": {
+            "cityid_english": 385,
+            "long_english": -115.6225,
+            "name_english": "Westmorland - 570 Cook St",
+            "lat_spanish": 33.0325,
+            "unavailable_spanish": "No hay datos de AQI",
+            "catname_english": "Moderate",
+            "name_spanish": "Westmorland - 570 Cook St",
+            "aqi_spanish": 54,
+            "long_spanish": -115.6225,
+            "cat_spanish": 2,
+            "catname_spanish": "Moderada",
+            "lat_english": 33.0325,
+            "time_english": "1:00 PM",
+            "param_english": "Ozone",
+            "unavailable_english": "No AQI data",
+            "param_spanish": "Ozone",
+            "time_spanish": "1:00 PM",
+            "cat_english": 2,
+            "aqi_english": 54,
+            "cityid_spanish": 385
+            },
+        "2": {
+            "cityid_english": 6547,
+            "long_english": -115.5444,
+            "name_english": "Niland - English Road",
+            "lat_spanish": 33.2136,
+            "unavailable_spanish": "No hay datos de AQI",
+            "catname_english": "Good",
+            "name_spanish": "Niland - English Road",
+            "aqi_spanish": 37,
+            "long_spanish": -115.5444,
+            "cat_spanish": 1,
+            "catname_spanish": "Buena",
+            "lat_english": 33.2136,
+            "time_english": "1:00 PM",
+            "param_english": "Ozone",
+            "unavailable_english": "No AQI data",
+            "param_spanish": "Ozone",
+            "time_spanish": "1:00 PM",
+            "cat_english": 1,
+            "aqi_english": 37,
+            "cityid_spanish": 6547
+            },
+        "3": {
+            "cityid_english": 382,
+            "long_english": -115.5617,
+            "name_english": "El Centro - 9th Street",
+            "lat_spanish": 32.7917,
+            "unavailable_spanish": "No hay datos de AQI",
+            "catname_english": "Moderate",
+            "name_spanish": "El Centro - 9th Street",
+            "aqi_spanish": 74,
+            "long_spanish": -115.5617,
+            "cat_spanish": 2,
+            "catname_spanish": "Moderada",
+            "lat_english": 32.7917,
+            "time_english": "1:00 PM",
+            "param_english": "Ozone",
+            "unavailable_english": "No AQI data",
+            "param_spanish": "Ozone",
+            "time_spanish": "1:00 PM",
+            "cat_english": 2,
+            "aqi_english": 74,
+            "cityid_spanish": 382
+            },
+        "4": {
+            "cityid_english": 379,
+            "long_english": -115.483299,
+            "name_english": "Calexico - Ethel Street",
+            "lat_spanish": 32.676102,
+            "unavailable_spanish": "No hay datos de AQI",
+            "catname_english": "Moderate",
+            "name_spanish": "Calexico - Ethel Street",
+            "aqi_spanish": 80,
+            "long_spanish": -115.483299,
+            "cat_spanish": 2,
+            "catname_spanish": "Moderada",
+            "lat_english": 32.676102,
+            "time_english": "1:00 PM",
+            "param_english": "Ozone",
+            "unavailable_english": "No AQI data",
+            "param_spanish": "Ozone",
+            "time_spanish": "1:00 PM",
+            "cat_english": 2,
+            "aqi_english": 80,
+            "cityid_spanish": 379
+            },
+        "5": {
+            "cityid_english": 7765,
+            "long_english": -115.5383,
+            "name_english": "Brawley - 220 Main Street",
+            "lat_spanish": 32.978298,
+            "unavailable_spanish": "No hay datos de AQI",
+            "catname_english": "Good",
+            "name_spanish": "Brawley - 220 Main Street",
+            "aqi_spanish": 17,
+            "long_spanish": -115.5383,
+            "cat_spanish": 1,
+            "catname_spanish": "Buena",
+            "lat_english": 32.978298,
+            "time_english": "1:00 PM",
+            "param_english": "PM10",
+            "unavailable_english": "No AQI data",
+            "param_spanish": "PM10",
+            "time_spanish": "1:00 PM",
+            "cat_english": 1,
+            "aqi_english": 17,
+            "cityid_spanish": 7765
             }
-        ]
+        }
 
 ### Create a New Question [POST]
 
